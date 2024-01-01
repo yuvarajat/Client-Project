@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/3e726f6a51.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <nav id="nav-bar" class="nav-bar">
+        <table class="nav-bar-left">
+          <tr>
+            <td><a class="header-button" href="#">Dashboard</a></td>
+            <td><a class="header-button" href="#">Reports</a></td>
+            <td><a class="header-button" href="#">Settings</a></td>
+          </tr>
+        </table>
+        <table class="nav-bar-right">
+          <tr>
+            <td><input type="search" /></td>
+            <td><i class="fa-solid fa-user"></i></td>
+          </tr>
+        </table>
+      </nav>
+
+      <div id="dashboard" class="dashboard grid-container">
+        <div class="item item1">
+          <div class="box-header">
+            <span class="box-title">Total Amount Requested</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+        </div>
+        <div class="item item2">
+          <div class="box-header">
+            <span class="box-title">Total Amount Approved</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+        </div>
+        <div class="item item3">
+          <div class="box-header">
+            <span class="box-title">Total Amount Pending</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+        </div>
+        <div class="item item4">
+          <div class="box-header">
+            <span class="box-title">Report Statistics</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+        </div>
+        <div class="item item5">
+          <div class="box-header">
+            <span class="box-title">Latest Transactions</span>
+            <span class="box-right"><button>see all transactions</button></span>
+          </div>
+          <hr />
+        </div>
+        <!-- <div class="item item5"></div> -->
+      </div>
+
+      <footer>© 2024 - Client. All Rights Reserved.</footer>
+    </div>
+  </body>
+</html>
