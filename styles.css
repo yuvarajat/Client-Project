@@ -14,86 +14,6 @@ hr {
   border: none;
 }
 
-/* Nav Bar */
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  background-color: #e72f33;
-}
-
-.nav-bar-left td {
-  padding: 10px;
-}
-
-.header-button {
-  color: whitesmoke;
-  text-decoration: none;
-}
-
-.header-button:hover {
-  color: white;
-}
-
-.nav-bar-left td:hover {
-  border-bottom: solid 3px #7d0a0a;
-}
-
-.nav-bar-right td {
-  padding: 10px;
-}
-
-[type="search"] {
-  border-radius: 15px;
-}
-
-/* Main Grid */
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 150px 450px;
-  /* border: solid 1px black; */
-  gap: 15px;
-  padding: 15px;
-}
-
-.item {
-  /* border: 1px solid black; */
-  /* text-align: center; */
-  padding: 10px;
-  background-color: #fefeff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.item5 {
-  grid-column: span 2;
-}
-
-.box-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.box-title {
-  font-size: 14px;
-}
-
-.box-right {
-  font-size: 10px;
-}
-
-button {
-  border-radius: 15px;
-  background-color: whitesmoke;
-}
-
-/* Footer */
-
-footer {
-  text-align: center;
-}
-
 /* Login Page */
 
 .mainDiv{
@@ -122,3 +42,155 @@ footer {
   height:30px;
 }
 
+.login img {
+  height: 90px;
+  width: auto;
+}
+
+
+/* Nav Bar */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e72f33;
+}
+
+.nav-bar ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+.header-button {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.header-button:hover {
+  color: white;
+}
+
+.nav-bar-left li {
+  display: inline-block;
+  padding: 15px;
+}
+
+.nav-bar-left li:hover {
+  border-bottom: solid 3px #7d0a0a;
+}
+
+.nav-bar-right td {
+  padding: 10px;
+}
+
+.nav-bar-right td i {
+  margin-right: 30px;
+}
+
+.nav-bar img {
+  height: 55px;
+  width: auto;
+  background-color: white;
+}
+
+[type="search"] {
+  border-radius: 15px;
+  height: 25px;
+  width: 200px;
+}
+
+/* Main Grid */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: 150px 85px 450px;
+  /* border: solid 1px black; */
+  gap: 15px;
+  padding: 15px;
+  justify-content: center;
+}
+
+.item {
+  /* border: 1px solid black; */
+  /* text-align: center; */
+  padding: 10px;
+  background-color: #fefeff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.item4 .box-header {
+  display: flex;
+  justify-content: center;
+}
+
+.item4 .box-content {
+  display: flex;
+  justify-content: center;
+}
+
+.req-reim {
+  background-color: #e72f33;
+  color: white;
+  height: 30px;
+  width: 200px;
+  border: solid 0px;
+}
+
+.item4, .item5 {
+  grid-column: span 3;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-title {
+  font-size: 14px;
+}
+
+.box-right {
+  font-size: 10px;
+}
+
+.box-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  border-radius: 15px;
+  background-color: white;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+}
+
+/* Form */
+
+.form {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.individual-entries td, .over-all-claim td{
+  padding: 5px;
+}
+
+.latest-transactions {
+  /* padding: 5px; */
+  width: 750px;
+  text-align: center;
+}
+
+.latest-transactions td {
+  padding: 8px;
+}

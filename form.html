@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="" class="form">
+        <div>
+            <h2>TRAVELLING EXPENSES / ALLOWANCE BILL</h2>
+        </div>
+        <br><br>
+        <div>
+            <b>Over All Claim Detail</b>
+        </div>
+        <br>
+        <table class="over-all-claim">
+            <tr>
+                <td>Date & Time of Departure</td>
+                <td><input id="dtd" type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td>Date & Time of Arrival</td>
+                <td><input id="dta" type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td>Purpose of the Journey</td>
+                <td><input id="purpose" type="text"></td>
+            </tr>
+        </table>
+        <button type="buttton">Add Claim</button>
+        <br><br>
+        <div>
+            <b>Individual Entries Of This Claim</b>
+        </div>
+        <br>
+        <table class="individual-entries">
+            <tr>
+                <td>Date</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Depart From</td>
+                <td><input type="text" name="" id="" placeholder="Either Madurai"></td>
+                <td>Arrive To</td>
+                <td><input type="text" placeholder="Dindigul"></td>
+            </tr>
+            <tr>
+                <td>Bus/Train Fare (Rs.)</td>
+                <td><input type="text"></td>
+                <td>Local Conveyance (Rs.)</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Lodging Charges (Rs.)</td>
+                <td><input type="text"></td>
+                <td>Meals Expenses (Rs.)</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Telephone Charges (Rs.)</td>
+                <td><input type="text"></td>
+                <td>Others (Rs.)</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>Batta (Rs.)</td>
+                <td><input type="text"></td>
+                <td>Total (Rs.)</td>
+                <td><input type="text" disabled></td>
+            </tr>
+            <tr>
+                <td>Remarks</td>
+                <td><textarea name="" id="" cols="20" rows="5"></textarea></td>
+            </tr>
+        </table>
+
+        <button type="buttton">Add Entry</button>
+    </form>
+</body>
+</html>

@@ -13,17 +13,16 @@
   <body>
     <div class="flex-container">
       <nav id="nav-bar" class="nav-bar">
-        <table class="nav-bar-left">
-          <tr>
-            <td><a class="header-button" href="#">Dashboard</a></td>
-            <td><a class="header-button" href="#">Reports</a></td>
-            <td><a class="header-button" href="#">Settings</a></td>
-          </tr>
-        </table>
+        <img src="media/TAG_Eicher.png" alt="TAG_Eicher_Logo">
+        <ul class="nav-bar-left">
+          <li><a class="header-button" href="#">Dashboard</a></li>
+          <li><a class="header-button" href="#">Reports</a></li>
+          <li><a class="header-button" href="#">Settings</a></li>
+        </ul>
         <table class="nav-bar-right">
           <tr>
-            <td><input type="search" /></td>
-            <td><i class="fa-solid fa-user"></i></td>
+            <td><input type="search" placeholder="  Search"/></td>
+            <td><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></td>
           </tr>
         </table>
       </nav>
@@ -35,6 +34,10 @@
             <span class="box-right">01 - 31 Jan 2024</span>
           </div>
           <hr />
+          <div class="box-content">
+            <span>₹ 35,000</span>
+            <i class="fa-solid fa-money-check fa-2xl" style="color: #e72f33;"></i>
+          </div>
         </div>
         <div class="item item2">
           <div class="box-header">
@@ -42,6 +45,10 @@
             <span class="box-right">01 - 31 Jan 2024</span>
           </div>
           <hr />
+          <div class="box-content">
+            <span>₹ 28,000</span>
+            <i class="fa-solid fa-wallet fa-2xl" style="color: #e72f33;"></i>
+          </div>
         </div>
         <div class="item item3">
           <div class="box-header">
@@ -49,13 +56,26 @@
             <span class="box-right">01 - 31 Jan 2024</span>
           </div>
           <hr />
+          <div class="box-content">
+            <span>₹ 7,000</span>
+            <i class="fa-solid fa-clock fa-2xl" style="color: #e72f33;"></i>
+          </div>
         </div>
-        <div class="item item4">
+        <!-- <div class="item item4">
           <div class="box-header">
             <span class="box-title">Report Statistics</span>
             <span class="box-right">01 - 31 Jan 2024</span>
           </div>
           <hr />
+        </div> -->
+        <div class="item item4">
+          <div class="box-header">
+            <span class="box-title">Raise A New Reimbersement Request</span>
+          </div>
+          <hr>
+          <div class="box-content">
+            <a href="form.html"><button class="req-reim">Request Reimbersement</button></a>
+          </div>
         </div>
         <div class="item item5">
           <div class="box-header">
@@ -63,8 +83,51 @@
             <span class="box-right"><button>see all transactions</button></span>
           </div>
           <hr />
+          <div>
+            <table class="latest-transactions">
+              <tr>
+                <th>Request Date</th>
+                <th>Request ID</th>
+                <th>Request Amount</th>
+                <th>Request Status</th>
+              </tr>
+              <tr>
+                <td>03.01.2024</td>
+                <td>TAG005</td>
+                <td>Rs. 3000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+              </tr>
+              <tr>
+                <td>03.01.2024</td>
+                <td>TAG004</td>
+                <td>Rs. 2000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+              </tr>
+              <tr>
+                <td>02.01.2024</td>
+                <td>TAG003</td>
+                <td>Rs. 2000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+              </tr>
+              <tr>
+                <td>02.01.2024</td>
+                <td>TAG002</td>
+                <td>Rs. 8000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #3cb043;"></i> Approved</td>
+              </tr>
+              <tr>
+                <td>01.01.2024</td>
+                <td>TAG001</td>
+                <td>Rs. 20000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #3cb043;"></i> Approved</td>
+              </tr>
+            </table>
+            
+          </div>
+          <div>
+
+          </div>
         </div>
-        <!-- <div class="item item5"></div> -->
       </div>
 
       <footer>© 2024 - Client. All Rights Reserved.</footer>
