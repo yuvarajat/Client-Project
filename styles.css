@@ -178,7 +178,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center;//
 }
 
 .individual-entries td, .over-all-claim td{
@@ -193,4 +193,23 @@ footer {
 
 .latest-transactions td {
   padding: 8px;
+}
+
+.claim-preview, .claim-preview th, .claim-preview td{
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 5px;
+  text-align: center;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
+
+.pad10px {
+  padding: 10px;
 }
