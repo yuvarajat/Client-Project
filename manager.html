@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/3e726f6a51.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="flex-container">
+      <nav id="nav-bar" class="nav-bar">
+        <img src="media/TAG_Eicher.png" alt="TAG_Eicher_Logo">
+        <ul class="nav-bar-left">
+          <li><a class="header-button" href="#">Dashboard</a></li>
+          <li><a class="header-button" href="#">Reports</a></li>
+          <li><a class="header-button" href="#">Settings</a></li>
+        </ul>
+        <table class="nav-bar-right">
+          <tr>
+            <td><input type="search" placeholder="  Search"/></td>
+            <td><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i></td>
+          </tr>
+        </table>
+      </nav>
+
+      <div id="dashboard" class="dashboard grid-container">
+        <div class="item item1">
+          <div class="box-header">
+            <span class="box-title">Requested Total Amount</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+          <div class="box-content">
+            <span>₹ 35,000</span>
+            <i class="fa-solid fa-money-check fa-2xl" style="color: #e72f33;"></i>
+          </div>
+        </div>
+        <div class="item item2">
+          <div class="box-header">
+            <span class="box-title">Total Amount You Approved</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+          <div class="box-content">
+            <span>₹ 28,000</span>
+            <i class="fa-solid fa-square-check fa-2xl" style="color: #e72f33;"></i>
+          </div>
+        </div>
+        <div class="item item3">
+          <div class="box-header">
+            <span class="box-title">Total Amount Still Pending</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+          <div class="box-content">
+            <span>₹ 7,000</span>
+            <i class="fa-solid fa-clock fa-2xl" style="color: #e72f33;"></i>
+          </div>
+        </div>
+        <!-- <div class="item item4">
+          <div class="box-header">
+            <span class="box-title">Report Statistics</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+        </div> -->
+        <div class="item item4">
+        </div>
+        <div class="item item5">
+          <div class="box-header">
+            <span class="box-title">Latest Transactions</span>
+            <span class="box-right"><button>see all transactions</button></span>
+          </div>
+          <hr />
+          <div>
+            <table class="latest-transactions">
+              <tr>
+                <th>Request Date</th>
+                <th>Request ID</th>
+                <th>Emp Name</th>
+                <th>Emp ID</th>
+                <th>Request Amount</th>
+                <th>Request Status</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>03.01.2024</td>
+                <td>TAG005</td>
+                <td>Yuvaraja</td>
+                <td>EMP023</td>
+                <td>Rs. 3000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+                <td><i class="fa-solid fa-thumbs-up" style="color: #3cb043;"></i> &nbsp; <i class="fa-solid fa-thumbs-down" style="color: #e72f33;"></i></td>
+              </tr>
+              <tr>
+                <td>03.01.2024</td>
+                <td>TAG004</td>
+                <td>Sanjay</td>
+                <td>EMP102</td>
+                <td>Rs. 2000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+                <td><i class="fa-solid fa-thumbs-up" style="color: #3cb043;"></i> &nbsp; <i class="fa-solid fa-thumbs-down" style="color: #e72f33;"></i></td>
+              </tr>
+              <tr>
+                <td>02.01.2024</td>
+                <td>TAG003</td>
+                <td>Mari</td>
+                <td>EMP041</td>
+                <td>Rs. 2000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+                <td><i class="fa-solid fa-thumbs-up" style="color: #3cb043;"></i> &nbsp; <i class="fa-solid fa-thumbs-down" style="color: #e72f33;"></i></td>
+                
+              </tr>
+              <tr>
+                <td>02.01.2024</td>
+                <td>TAG002</td>
+                <td>Bhavani</td>
+                <td>EMP007</td>
+                <td>Rs. 8000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #3cb043;"></i> Approved</td>
+                <td><i class="fa-solid fa-square-check" style="color: #3cb043;"></i></td>
+              </tr>
+              <tr>
+                <td>01.01.2024</td>
+                <td>TAG001</td>
+                <td>Vinoth</td>
+                <td>EMP027</td>
+                <td>Rs. 20000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #3cb043;"></i> Approved</td>
+                <td><i class="fa-solid fa-square-check" style="color: #3cb043;"></i></i></td>
+              </tr>
+            </table>
+            
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Reimbersment Request -->
+
+      <div id="dashboard" class="dashboard grid-container">
+        <div class="item item1">
+          <div class="box-header">
+            <span class="box-title">Total Amount Requested</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+          <div class="box-content">
+            <span>₹ 5,000</span>
+            <i class="fa-solid fa-money-check fa-2xl" style="color: #e72f33;"></i>
+          </div>
+        </div>
+        <div class="item item2">
+          <div class="box-header">
+            <span class="box-title">Total Amount Approved</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+          <div class="box-content">
+            <span>₹ 0</span>
+            <i class="fa-solid fa-wallet fa-2xl" style="color: #e72f33;"></i>
+          </div>
+        </div>
+        <div class="item item3">
+          <div class="box-header">
+            <span class="box-title">Total Amount Pending</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+          <div class="box-content">
+            <span>₹ 5,000</span>
+            <i class="fa-solid fa-clock fa-2xl" style="color: #e72f33;"></i>
+          </div>
+        </div>
+        <!-- <div class="item item4">
+          <div class="box-header">
+            <span class="box-title">Report Statistics</span>
+            <span class="box-right">01 - 31 Jan 2024</span>
+          </div>
+          <hr />
+        </div> -->
+        <div class="item item4">
+          <div class="box-header">
+            <span class="box-title">Raise A New Reimbersement Request</span>
+          </div>
+          <hr>
+          <div class="box-content">
+            <a href="form.html"><button class="req-reim">Request Reimbersement</button></a>
+          </div>
+        </div>
+        <div class="item item5">
+          <div class="box-header">
+            <span class="box-title">Latest Transactions</span>
+            <span class="box-right"><button>see all transactions</button></span>
+          </div>
+          <hr />
+          <div>
+            <table class="latest-transactions">
+              <tr>
+                <th>Request Date</th>
+                <th>Request ID</th>
+                <th>Request Amount</th>
+                <th>Request Status</th>
+              </tr>
+              <tr>
+                <td>03.01.2024</td>
+                <td>TAG007</td>
+                <td>Rs. 3000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+              </tr>
+              <tr>
+                <td>03.01.2024</td>
+                <td>TAG006</td>
+                <td>Rs. 2000/-</td>
+                <td><i class="fa-solid fa-circle fa-2xs" style="color: #e72f33;"></i> Pending</td>
+              </tr>
+            </table>
+            
+          </div>
+          <div>
+
+          </div>
+        </div>
+      </div>
+
+      <footer>© 2024 - TAG Madurai. All Rights Reserved.</footer>
+      <br><br>
+    </div>
+  </body>
+</html>
