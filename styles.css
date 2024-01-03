@@ -223,3 +223,23 @@ footer {
   margin: 10px;
 }
 
+/* Success Page */
+
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e72f33;
+  height: 100vh;
+}
+
+.success-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+.success-item img {
+  width: 70px;
+}
