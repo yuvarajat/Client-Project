@@ -1,93 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script
       src="https://kit.fontawesome.com/3e726f6a51.js"
       crossorigin="anonymous"
     ></script>
-</head>
-<body class="formhtml">
+  </head>
+  <body class="formhtml">
     <form action="" class="form">
-        <div>
-            <h2>TRAVELLING EXPENSES / ALLOWANCE BILL</h2>
-        </div>
-        <br><br>
-        <div>
-            <b>Travel Details</b>
-        </div>
-        <br>
-        <table class="travel-details">
-            <tr>
-                <td>Start Date</td>
-                <td><input id="dtd" type="date"></td>
-            </tr>
-            <tr>
-                <td>End Date</td>
-                <td><input id="dta" type="date"></td>
-            </tr>
-            <tr>
-                <td>Purpose of the Journey</td>
-                <td><input id="purpose" type="text"></td>
-            </tr>
-        </table>
-        <button type="buttton">Add Claim</button>
-        <br><br>
-        <div>
-            <b>Individual Entries Of This Claim</b>
-        </div>
+        <img src="media/TAG_Eicher.png" alt="TAG_Eicher_Logo">
+      <div>
+        <h2>TRAVELLING EXPENSES / ALLOWANCE BILL</h2>
+      </div>
+      <br />
+      <div>
+        <h3>Travel Details</h3>
+      </div>
+      <br />
+      <table class="travel-details">
+        <tr>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Purpose Of The Journey</th>
+        </tr>
+        <tr>
+          <td><input class="dtd" type="date" /></td>
+          <td><input class="dta" type="date" /></td>
+          <td>
+            <select id="purpose-dropdown" class="form-purpose">
+              <option value="Training">Training</option>
+              <option value="Company Visit">Company Visit</option>
+              <option value="Field Visit">Field Visit</option>
+            </select>
+          </td>
+        </tr>
+      </table>
     </form>
-        <br>
-        <form action="" class="form">
-            <table class="individual-entries">
-                <tr>
-                    <td>Date</td>
-                    <td><input type="date"></td>
-                </tr>
-                <tr>
-                    <td>Depart From</td>
-                    <td><input type="text" name="" id="" placeholder="Either Madurai"></td>
-                    <td>Arrive To</td>
-                    <td><input type="text" placeholder="Dindigul"></td>
-                </tr>
-                <tr>
-                    <td>Bus/Train Fare (Rs.)</td>
-                    <td><input type="text"></td>
-                    <td>Local Conveyance (Rs.)</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Lodging Charges (Rs.)</td>
-                    <td><input type="text"></td>
-                    <td>Meals Expenses (Rs.)</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Telephone Charges (Rs.)</td>
-                    <td><input type="text"></td>
-                    <td>Others (Rs.)</td>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td>Batta (Rs.)</td>
-                    <td><input type="text"></td>
-                    <td>Total (Rs.)</td>
-                    <td><input type="text" disabled></td>
-                </tr>
-                <tr>
-                    <td>Remarks</td>
-                    <td><textarea name="" id="" cols="20" rows="5"></textarea></td>
-                    <td>Upload Receipt</td>
-                    <td><input type="file"></td>
-                </tr>
-            </table>
-        <button type="buttton">Add Entry</button>
+    <br />
+    <form id="form" action="" class="form">
+      <div>
+        <h3>Individual Entries</h3>
+      </div>
+      <br />
+      <table class="individual-entries">
+        <tr>
+          <th>Date</th>
+          <th>Depart From</th>
+          <th>Arrive To</th>
+          <th>Types Of Expenses</th>
+          <th>Amount</th>
+          <th>Remarks</th>
+          <th>Receipt</th>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ1" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt1" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ2" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt2" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ3" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt3" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ4" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt4" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ5" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt5" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ6" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt6" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ7" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt7" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ8" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt8" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ9" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt9" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td><input type="date" class="form-date" /></td>
+          <td><input type="text" class="form-depart" /></td>
+          <td><input type="text" class="form-arrive" /></td>
+          <td>
+            <select id="typ10" class="form-type-of-expenses">
+                <option value="Bus/Train Fare">Bus/Train Fare</option>
+                <option value="Local Conveyance">Local Conveyance</option>
+                <option value="Lodging Charges">Lodging Charges</option>
+                <option value="Meals Expenses">Meals Expenses</option>
+                <option value="Telephone Charges">Telephone Charges</option>
+                <option value="Batta">Batta</option>
+                <option value="Others">Others</option>
+            </select>
+          </td>
+          <td><input type="text" id="amt10" class="form-amount" oninput="updateSum(event)"/></td>
+          <td><input type="text" class="form-remarks" /></td>
+          <td><input type="file" class="form-receipt" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><br /><b>Total Claim Amount:</b></td>
+          <td>
+            <br /><input
+              id="form-total"
+              class="form-total"
+              type="text"
+              disabled
+            />
+          </td>
+        </tr>
+      </table>
+      <br />
     </form>
-    <br><br>
-    <table class="claim-preview">
+    <!-- <table class="claim-preview">
         <tr>
             <th>Start Date</th>
             <th>End Date</th>
@@ -99,8 +275,8 @@
             <td>Client Meeting</td>
         </tr>
     </table>
-    <br><br>
-    <table class="claim-preview">
+    <br><br> -->
+    <!-- <table class="claim-preview">
         <tr>
             <th>Date</th>
             <th>Depart From</th>
@@ -221,16 +397,143 @@
             <td><i class="fa-solid fa-eye"></i></td>
             <td><i class="fa-solid fa-pen-to-square" style="color: #e72f33;"></i> &nbsp; <i class="fa-solid fa-trash" style="color: #e72f33;"></i></td>
         </tr>
-    </table>
-    <br><br>
-    <div class="ta-right pad10px"><b>Total Claim Amount:</b> 3500</div>
-    <div class="ta-right pad10px"><b>Amount in Words:</b> Three Thousand Five Hundred Rupees Only.</div>
-    <br><br>
+    </table> -->
+    <!-- <br /><br />
+    <div class="ta-right pad10px"><b>Total Claim Amount:</b> 3500</div> -->
+    <div class="ta-right pad10px">
+      <b>Amount in Words:</b> <input type="text" id="amt-in-words" disabled>
+    </div>
+    <br /><br />
 
     <div class="ta-center">
-        <a href="success.html"><button class="" type="submit">Claim Now</button></a>
+      <a href="success.html"
+        ><button class="" type="submit" id="claim-now-btn">Claim Now</button></a
+      >
     </div>
 
-    <br><br>
-</body>
+    <br /><br />
+
+    <script>
+        const form = document.getElementById("form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const amt1 = document.getElementById("amt1").value;
+            const amt2 = document.getElementById("amt2").value;
+            const amt3 = document.getElementById("amt3").value;
+            const amt4 = document.getElementById("amt4").value;
+            const amt5 = document.getElementById("amt5").value;
+            const amt6 = document.getElementById("amt6").value;
+            const amt7 = document.getElementById("amt7").value;
+            const amt8 = document.getElementById("amt8").value;
+            const amt9 = document.getElementById("amt9").value;
+            const amt10 = document.getElementById("amt10").value;
+        });
+        function updateSum(event) {
+            let total = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                let amtId = `amt${i}`;
+                let amtElement = document.getElementById(amtId);
+
+                if (amtElement) {
+                // Check if the element exists
+                total += parseFloat(amtElement.value) || 0; // Convert to float, default to 0 if not a valid number
+                }
+            }
+            document.getElementById("form-total").value = total.toFixed(2);
+            const amountInWords = numberToWords(total);
+            document.getElementById("amt-in-words").value = amountInWords;
+        }
+
+        function numberToWords(number) {
+            const units = [
+                "",
+                "One",
+                "Two",
+                "Three",
+                "Four",
+                "Five",
+                "Six",
+                "Seven",
+                "Eight",
+                "Nine",
+                "Ten",
+            ];
+            const teens = [
+                "Eleven",
+                "Twelve",
+                "Thirteen",
+                "Fourteen",
+                "Fifteen",
+                "Sixteen",
+                "Seventeen",
+                "Eighteen",
+                "Nineteen",
+            ];
+            const tens = [
+                "",
+                "",
+                "Twenty",
+                "Thirty",
+                "Forty",
+                "Fifty",
+                "Sixty",
+                "Seventy",
+                "Eighty",
+                "Ninety",
+            ];
+
+            function convertLessThanOneThousand(n) {
+                if (n === 0) {
+                return "";
+                } else if (n <= 10) {
+                return units[n];
+                } else if (n < 20) {
+                return teens[n - 11];
+                } else if (n < 100) {
+                return tens[Math.floor(n / 10)] + " " + units[n % 10];
+                } else {
+                return (
+                    units[Math.floor(n / 100)] +
+                    " Hundred " +
+                    convertLessThanOneThousand(n % 100)
+                );
+                }
+            }
+
+            function convert(number) {
+                if (number === 0) {
+                return "Zero";
+                }
+
+                let result = "";
+                let billion = Math.floor(number / 1000000000);
+                let million = Math.floor((number % 1000000000) / 1000000);
+                let thousand = Math.floor((number % 1000000) / 1000);
+                let remainder = number % 1000;
+
+                if (billion) {
+                result += convertLessThanOneThousand(billion) + " Billion ";
+                }
+
+                if (million) {
+                result += convertLessThanOneThousand(million) + " Million ";
+                }
+
+                if (thousand) {
+                result += convertLessThanOneThousand(thousand) + " Thousand ";
+                }
+
+                if (remainder) {
+                result += convertLessThanOneThousand(remainder);
+                }
+
+                return result.trim();
+            }
+
+            return convert(number);
+            }
+    </script>
+  </body>
 </html>

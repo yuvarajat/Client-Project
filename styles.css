@@ -221,6 +221,47 @@ footer {
   align-items: center;
   padding: 10px;
   margin: 10px;
+  /* background-color: #f97376; */
+}
+
+.formhtml img {
+  height: 100px;
+}
+
+.form-date {
+  width: 110px;
+}
+
+.form-depart, .form-arrive {
+  width: 120px;
+}
+
+.form-amount, .form-total {
+  width: 90px;
+}
+
+.form-type-of-expenses {
+  width: 180px;
+}
+
+.form-receipt {
+  width: 200px;
+}
+
+.form-purpose {
+  width: 200px;
+}
+
+#amt-in-words {
+  width: 400px;
+}
+
+#claim-now-btn {
+  height: 30px;
+  width: 100px;
+  background-color: #3cb043;
+  color: white;
+  font-weight: bolder;
 }
 
 /* Success Page */
@@ -243,3 +284,4 @@ footer {
 .success-item img {
   width: 70px;
 }
+
