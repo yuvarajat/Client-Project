@@ -181,6 +181,10 @@ footer {
   align-items: center;
 }
 
+.individual-entries, .travel-details{
+  padding: 15px;
+}
+
 .individual-entries td, .travel-details td{
   padding: 5px;
 }
